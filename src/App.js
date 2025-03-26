@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import axios from 'axios';
-
+import "./App.css"
 // Main page component
 function Home({ addToWatchlist, movies }) {
   return (
-    <div>
+    <div className='homeclass'>
       <h1>Movie List</h1>
       <div className="movie-list">
         {movies.map((movie) => (
@@ -13,7 +13,7 @@ function Home({ addToWatchlist, movies }) {
             <img
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
               alt={movie.title}
-              style={{ width: '200px' }}
+              style={{ width: '100px' , height:'200px'}}
             />
             <h3>{movie.title}</h3>
             <p>{movie.overview}</p>
